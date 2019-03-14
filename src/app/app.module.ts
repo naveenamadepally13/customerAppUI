@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { CustomerUpdateComponent } from './customer-update/customer-update.compo
 import { CustomerDeleteComponent } from './customer-delete/customer-delete.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerReadComponent } from './customer-read/customer-read.component';
+import {CustomerServiceService} from './customer-service.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { CustomerReadComponent } from './customer-read/customer-read.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CustomerServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
