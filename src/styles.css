@@ -2,3 +2,11 @@
 .backcss{
   background-image: radial-gradient(circle, #051937, #00446e, #007289, #00a076, #50c83d);
 }
+
+.backBorder
+{
+  border: none;
+  -webkit-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
+  -moz-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
+  box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
+}

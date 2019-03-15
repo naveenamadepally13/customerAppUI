@@ -10,5 +10,5 @@ var customerSchema = new mongoose.Schema({
   date: {type: Date, default: Date.now},
 });
 
-const customer = mongoose.model('Customer',customerSchema);
+const customer = mongoose.model('customers',customerSchema);
 module.exports = customer;

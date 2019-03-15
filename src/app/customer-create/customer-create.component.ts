@@ -11,10 +11,11 @@ import {first} from 'rxjs/operators';
 })
 export class CustomerCreateComponent implements OnInit {
   angForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private router: Router, private customerService: CustomerServiceService) {
+  constructor(private router: Router, private customerService: CustomerServiceService) {
   }
   addCustomer(event) {
     const customerDetail = {
+        custID: '1',
         firstName: event.firstName,
         lastName: event.lastName,
         emailAddress: event.emailAddress,
@@ -23,11 +24,11 @@ export class CustomerCreateComponent implements OnInit {
     };
     this.customerService.postCustomer(customerDetail)
       .subscribe(res => {
+        this.router.navigateByUrl('customers');
       }, (err) => {
         console.log(err);
       });
   }
-
   ngOnInit() {
   }
 }
