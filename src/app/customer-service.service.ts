@@ -45,7 +45,6 @@ export class CustomerServiceService {
       map(this.extractData),
       catchError(this.handleError));
   }
-
   postCustomer(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions)
       .pipe(
