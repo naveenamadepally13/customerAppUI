@@ -8,6 +8,10 @@ box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
       <div class="card-body">
         <form #customerCreate = "ngForm" (ngSubmit)="addCustomer(customerCreate.value)">
           <div class="form-group">
+            <label class="col-md-4">Unique Customer ID</label>
+            <input type="text" class="form-control" name="custID" ngModel/>
+          </div>
+          <div class="form-group">
             <label class="col-md-4">First Name</label>
             <input type="text" class="form-control" name="firstName" ngModel/>
           </div>

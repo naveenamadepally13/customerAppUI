@@ -15,7 +15,7 @@ export class CustomerCreateComponent implements OnInit {
   }
   addCustomer(event) {
     const customerDetail = {
-        custID: '1',
+        custID: event.custID,
         firstName: event.firstName,
         lastName: event.lastName,
         emailAddress: event.emailAddress,

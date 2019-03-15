@@ -23,21 +23,21 @@ box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
           <th class="text-center">Edit</th>
           <th class="text-center">Delete</th>
         </tr>
-        <tr>
-          <td class="pt-3-half" contenteditable="true">{{customers.custID}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.firstName}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.lastName}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.emailAddress}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.address}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.phoneNo}}</td>
-          <td class="pt-3-half" contenteditable="true">{{customers.date}}</td>
-          <td class="pt-3-half">
-           <span><i class="fas fa-edit"></i></span>
-          </td>
-          <td class="pt-3-half">
-            <span><i class="fas fa-trash-alt"></i></span>
-          </td>
-        </tr>
+          <tr *ngFor="let customerData of customers">
+            <td class="pt-3-half" contenteditable="true">{{customerData.custID}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.firstName}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.lastName}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.emailAddress}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.address}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.phoneNo}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.date}}</td>
+            <td class="pt-3-half">
+              <span><i class="fas fa-edit" id="{{customerData.custID}}"></i></span>
+            </td>
+            <td class="pt-3-half">
+              <span><i class="fas fa-trash-alt"></i></span>
+            </td>
+          </tr>
       </table>
     </div>
   </div>
