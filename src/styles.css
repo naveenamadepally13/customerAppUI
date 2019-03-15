@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 .backcss{
-  background-image: radial-gradient(circle, #051937, #00446e, #007289, #00a076, #50c83d);
+  background-image: url(assets/images/business_people_02.jpg);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-color: silver;
 }
 
 .backBorder

@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
 var customerSchema = new mongoose.Schema({
-  custID: String,
   firstName: String,
   lastName: String,
   emailAddress: String,

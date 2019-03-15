@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup} from '@angular/forms';
 import { CustomerServiceService } from '../customer-service.service';
 import { Router } from '@angular/router';
-import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-customer-create',
@@ -15,7 +14,6 @@ export class CustomerCreateComponent implements OnInit {
   }
   addCustomer(event) {
     const customerDetail = {
-        custID: event.custID,
         firstName: event.firstName,
         lastName: event.lastName,
         emailAddress: event.emailAddress,
@@ -29,6 +27,7 @@ export class CustomerCreateComponent implements OnInit {
         console.log(err);
       });
   }
+
   ngOnInit() {
   }
 }

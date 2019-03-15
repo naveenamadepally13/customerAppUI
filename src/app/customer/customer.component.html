@@ -1,8 +1,5 @@
-<div style="padding: 30px">
-<div class="card" style="border: none;
--webkit-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
--moz-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
+<div style="padding-top: 20px">
+<div class="card" style="border: none;font-size: smaller">
   <h4 class="card-header text-center font-weight-bold text-uppercase py-2">Customer Details</h4>
   <div class="card-body">
     <div id="table" class="table-editable">
@@ -13,7 +10,7 @@ box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
       </span>
       <table class="table table-bordered table-responsive-md table-striped text-center">
         <tr>
-          <th class="text-center">Cust ID</th>
+          <th class="text-center">S.No</th>
           <th class="text-center">First Name</th>
           <th class="text-center">Last Name</th>
           <th class="text-center">Email</th>
@@ -23,8 +20,8 @@ box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
           <th class="text-center">Edit</th>
           <th class="text-center">Delete</th>
         </tr>
-          <tr *ngFor="let customerData of customers">
-            <td class="pt-3-half" contenteditable="true">{{customerData.custID}}</td>
+          <tr *ngFor="let customerData of customers; let id = index ">
+            <td class="pt-3-half" contenteditable="true">{{ id+1 }}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.firstName}}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.lastName}}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.emailAddress}}</td>
@@ -32,10 +29,15 @@ box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
             <td class="pt-3-half" contenteditable="true">{{customerData.phoneNo}}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.date}}</td>
             <td class="pt-3-half">
-              <span><i class="fas fa-edit" id="{{customerData.custID}}"></i></span>
+              <button class="btn" (click)="edit(customerData)">
+                <span><i class="fas fa-edit" id="{{customerData.custID}}"></i>
+              </span>
+              </button>
             </td>
             <td class="pt-3-half">
+              <button class="btn" (click)="delete(customerData)">
               <span><i class="fas fa-trash-alt"></i></span>
+              </button>
             </td>
           </tr>
       </table>

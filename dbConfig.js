@@ -14,7 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'dist/CustomerAPP')));
 app.use('/customers', express.static(path.join(__dirname, 'dist/CustomerAPP')));
-app.use('/customer-read/:id', express.static(path.join(__dirname, 'dist/CustomerAPP')));
 app.use('/customer-create', express.static(path.join(__dirname, 'dist/CustomerAPP')));
 app.use('/customer-edit/:id', express.static(path.join(__dirname, 'dist/CustomerAPP')));
 app.use('/api', apiRouter);

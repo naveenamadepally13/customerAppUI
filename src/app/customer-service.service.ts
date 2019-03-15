@@ -14,7 +14,8 @@ const apiUrl = '/api';
 })
 
 export class CustomerServiceService {
-
+public editdata = { };
+public id;
   constructor(private http: HttpClient) { }
 
   private handleError(error: HttpErrorResponse) {
@@ -39,12 +40,6 @@ export class CustomerServiceService {
       map(this.extractData),
       catchError(this.handleError));
   }
-
-  getCustomer(id: string): Observable<any> {
-    return this.http.get(`${apiUrl}/${id}`, httpOptions).pipe(
-      map(this.extractData),
-      catchError(this.handleError));
-  }
   postCustomer(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions)
       .pipe(
@@ -52,7 +47,7 @@ export class CustomerServiceService {
       );
   }
 
-  updateUstomer(id: string, data): Observable<any> {
+  updateCustomerData(id: string, data): Observable<any> {
     return this.http.put(`${apiUrl}/${id}`, data, httpOptions)
       .pipe(
         catchError(this.handleError)
