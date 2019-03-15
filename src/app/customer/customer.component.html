@@ -1,3 +1,45 @@
-<p>
-  customer works!
-</p>
+<div style="padding: 30px">
+<div class="card" style="border: none;
+-webkit-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
+-moz-box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);
+box-shadow: -1px 1px 5px 6px rgba(245,228,245,1);">
+  <h4 class="card-header text-center font-weight-bold text-uppercase py-2">Customer Details</h4>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2">
+       <button class="btn" (click)="open()"> <i class="fa fa-plus">
+         Add Customer
+       </i></button>
+      </span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">Cust ID</th>
+          <th class="text-center">First Name</th>
+          <th class="text-center">Last Name</th>
+          <th class="text-center">Email</th>
+          <th class="text-center">Address</th>
+          <th class="text-center">Phone</th>
+          <th class="text-center">Registered Date</th>
+          <th class="text-center">Edit</th>
+          <th class="text-center">Delete</th>
+        </tr>
+        <tr>
+          <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
+          <td class="pt-3-half" contenteditable="true">30</td>
+          <td class="pt-3-half" contenteditable="true">Deepends</td>
+          <td class="pt-3-half" contenteditable="true">Spain</td>
+          <td class="pt-3-half" contenteditable="true">Madrid</td>
+          <td class="pt-3-half" contenteditable="true">Madrid</td>
+          <td class="pt-3-half" contenteditable="true">Madrid</td>
+          <td class="pt-3-half">
+           <span><i class="fas fa-edit"></i></span>
+          </td>
+          <td class="pt-3-half">
+            <span><i class="fas fa-trash-alt"></i></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

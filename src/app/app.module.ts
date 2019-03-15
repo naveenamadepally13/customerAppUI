@@ -11,6 +11,7 @@ import { CustomerDeleteComponent } from './customer-delete/customer-delete.compo
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerReadComponent } from './customer-read/customer-read.component';
 import {CustomerServiceService} from './customer-service.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {CustomerServiceService} from './customer-service.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [CustomerServiceService],
   bootstrap: [AppComponent]
