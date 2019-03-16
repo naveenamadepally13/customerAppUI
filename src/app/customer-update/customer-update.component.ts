@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CustomerUpdateComponent implements OnInit {
 
-  constructor(private router: Router, private customerService: CustomerServiceService) {
+  constructor(private router: Router, public customerService: CustomerServiceService) {
   }
   onUpdateCustomer(event) {
     const customerDetail = {

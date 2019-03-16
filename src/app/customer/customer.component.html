@@ -27,10 +27,10 @@
             <td class="pt-3-half" contenteditable="true">{{customerData.emailAddress}}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.address}}</td>
             <td class="pt-3-half" contenteditable="true">{{customerData.phoneNo}}</td>
-            <td class="pt-3-half" contenteditable="true">{{customerData.date}}</td>
+            <td class="pt-3-half" contenteditable="true">{{customerData.date | date:"MMM d y"}}</td>
             <td class="pt-3-half">
               <button class="btn" (click)="edit(customerData)">
-                <span><i class="fas fa-edit" id="{{customerData.custID}}"></i>
+                <span><i class="fas fa-edit"></i>
               </span>
               </button>
             </td>
